@@ -4,7 +4,7 @@ var { makeLog } = require('../utils/logentries.js');
 
 async function connectDB() {
   try {
-    const conn = await mongoose.connect("mongodb+srv://ljremi:gGTNbMwTNEENQzdq@cluster0.6ok7t.mongodb.net/");
+    const conn = await mongoose.connect(process.env.DB_URL);
     const { host, port } = conn.connection;
     await makeLog(
       `Database connected successfully at ${host}:${port}`,
