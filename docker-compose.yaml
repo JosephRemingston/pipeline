@@ -1,9 +1,0 @@
-version: "3.9"
-services:
-
-  onlyclick-server:
-    build: .
-    container_name: onlyclick-server
-    ports:
-      - "9000:3000"
-    restart: always
