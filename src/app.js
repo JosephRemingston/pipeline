@@ -5,7 +5,6 @@ require("dotenv").config();
 var {connectDB} = require("./database/catalog.js");
 var { roles, category } =  require("../src/utils/logentries.js");
 
-
 const app = express();
 
 
@@ -25,7 +24,7 @@ connectDB().then(() => {
     console.log(`connection error ${err}`);
 })
 app.get("/", (req, res) => {
-    res.json("server");
+    res.json("onlyclick-server");
 });
 const PORT = 3000;
 app.listen(PORT, () => {
