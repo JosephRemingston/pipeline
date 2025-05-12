@@ -25,7 +25,7 @@ app.use(cookieParser());
 //    console.log(`connection error ${err}`);
 //})
 app.get("/", (req, res) => {
-    res.json("server");
+    res.json("server " + database);
 });
 const PORT = 3000;
 app.listen(PORT, () => {
