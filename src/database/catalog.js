@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 var asyncHandler = require("../utils/asyncHandler.js");
 var { makeLog } = require('../utils/logentries.js');
-
+var DB_URL = "mongodb+srv://ljremi:gGTNbMwTNEENQzdq@cluster0.6ok7t.mongodb.net/"
 async function connectDB() {
   try {
-    const conn = await mongoose.connect("mongodb+srv://ljremi:gGTNbMwTNEENQzdq@cluster0.6ok7t.mongodb.net/");
+    const conn = await mongoose.connect(DB_URL);
     const { host, port } = conn.connection;
     await makeLog(
       `Database connected successfully at ${host}:${port}`,
