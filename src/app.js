@@ -18,14 +18,14 @@ app.use(
 );
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-//connectDB().then(() => {
-//    database = "connected";
-//   console.log("Connect to mongodb");
-//}).catch((err) => {
-//    console.log(`connection error ${err}`);
-//})
+connectDB().then(() => {
+    database = "connected";
+   console.log("Connect to mongodb");
+}).catch((err) => {
+    console.log(`connection error ${err}`);
+})
 app.get("/", (req, res) => {
-    res.json("server");
+    res.json("server" + database);
 });
 const PORT = 3000;
 app.listen(PORT, () => {
