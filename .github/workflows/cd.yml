@@ -31,7 +31,7 @@ jobs:
       - name : build env file
         run: |
           echo "DB_URL=${DB_URL}" > .env
-          echo "${DB_URL}
+          printf "DB_URL=%s\n" "$DB_URL"> .env
 
       - name: Run new container
         run: |
