@@ -12,7 +12,7 @@ jobs:
     environment : production
     env:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-      DB_URL : ${{ vars.DB_URL }}
+      DB_URL : ${{ vars.DATA_URL }}
 
     steps:
       - name: Pull Image from Docker Hub
