@@ -27,5 +27,4 @@ async function connectDB() {
     throw new Error('Database connection failed');
   }
 }
-
 module.exports = { connectDB };
